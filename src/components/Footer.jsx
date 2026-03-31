@@ -3,22 +3,24 @@ import { company } from "../data/company";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-secondary border-t border-dark-border">
+    <footer className="bg-dark text-text-on-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="font-heading text-xl font-bold text-primary mb-3">
-              Asshofiyah
-            </h3>
-            <p className="text-text-secondary text-sm leading-relaxed">
+            <img
+              src="/images/logo.png"
+              alt="Asshofiyah"
+              className="h-12 w-auto mb-4"
+            />
+            <p className="text-text-muted text-sm leading-relaxed">
               {company.description}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
+            <h4 className="font-heading text-sm font-semibold text-text-on-dark mb-4 uppercase tracking-wider">
               Menu
             </h4>
             <ul className="space-y-2">
@@ -27,12 +29,13 @@ export default function Footer() {
                 { name: "Tentang Kami", path: "/tentang-kami" },
                 { name: "Armada", path: "/armada" },
                 { name: "Harga Sewa", path: "/harga-sewa" },
+                { name: "Kalkulator Trip", path: "/kalkulator" },
                 { name: "Kontak", path: "/kontak" },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-text-secondary text-sm hover:text-primary transition-colors"
+                    className="text-text-muted text-sm hover:text-primary-light transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -43,10 +46,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
+            <h4 className="font-heading text-sm font-semibold text-text-on-dark mb-4 uppercase tracking-wider">
               Kontak
             </h4>
-            <ul className="space-y-2 text-text-secondary text-sm">
+            <ul className="space-y-2 text-text-muted text-sm">
               <li>{company.address}</li>
               <li>{company.phone}</li>
               <li>{company.email}</li>
@@ -65,7 +68,7 @@ export default function Footer() {
               href="https://synthesis-lab.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary-light transition-colors"
+              className="text-primary-light hover:text-primary transition-colors"
             >
               Synthesis Lab
             </a>

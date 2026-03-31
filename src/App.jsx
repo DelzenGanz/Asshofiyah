@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Fleet from "./pages/Fleet";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import Calculator from "./pages/Calculator";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/tentang-kami" element={<About />} />
           <Route path="/armada" element={<Fleet />} />
           <Route path="/harga-sewa" element={<Pricing />} />
+          <Route path="/kalkulator" element={<Calculator />} />
           <Route path="/kontak" element={<Contact />} />
         </Routes>
       </main>

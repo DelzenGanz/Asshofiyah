@@ -56,11 +56,20 @@ Use **https://takatrans.co.id** as the primary design & feature reference. Takat
 2. **Tentang Kami** — Company profile, why choose Asshofiyah, safety standards, relationship with parent group
 3. **Armada** — Fleet catalog with card layout: photo, vehicle name, seat capacity, facilities list (AC, reclining seats, WiFi, karaoke, TV, cooler box, USB charger, etc.), and "Pesan Sekarang" CTA per vehicle
 4. **Harga Sewa** — Price list table per vehicle type, terms & conditions (rental per calendar day, driver included, overtime rates Rp 200.000/jam, cancellation policy H-3, payment via bank transfer)
-5. **Kontak** — WhatsApp CTA (floating + inline), Google Maps embed, simple booking form (name, phone, date, vehicle type)
+5. **Kalkulator Trip** — Interactive trip cost calculator where users can:
+   - Select vehicle type (dropdown)
+   - Input number of days
+   - Select destination area/route (e.g., Dalam Kota Semarang, Jogja, Surabaya, Malang, Jakarta, Bali, etc.)
+   - Auto-calculate estimated total cost (base rental + estimated fuel/toll if applicable)
+   - Show a summary card with breakdown: vehicle price/day × days + extras
+   - CTA button "Booking via WhatsApp" that auto-fills a WhatsApp message with the trip details (vehicle, dates, destination, estimated cost)
+   - Reference: Takatrans has a similar trip calculator on their site — follow that UX pattern
+6. **Kontak** — WhatsApp CTA (floating + inline), Google Maps embed, simple booking form (name, phone, date, vehicle type)
 
 ### Key Features
 - Mobile-first responsive design (most customers browse from phone)
 - WhatsApp floating button on all pages (wa.me link)
+- **Trip calculator** — interactive cost estimator with WhatsApp integration (see page 5 above)
 - Google Maps embed for office/garage location
 - SEO on-page: meta title, meta description, heading hierarchy (H1-H3), alt text on images, sitemap
 - Core Web Vitals optimized: lazy load images, compress assets, optimal font loading
@@ -95,7 +104,6 @@ main.jsx       # Entry point
 
 ### Design Direction
 - Premium, clean, and modern — similar to Takatrans but adapted for Asshofiyah's brand
-- Dark or neutral color scheme preferred (the Synthesis Lab aesthetic works well here)
 - Mobile-first: design for phone screens first, then scale up to desktop
 - Prominent WhatsApp CTAs everywhere — this is the primary booking channel for rental companies
 - Vehicle cards should show key info at a glance: photo placeholder, vehicle name, capacity, price range, facilities badges, book button
