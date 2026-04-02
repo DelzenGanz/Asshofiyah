@@ -22,9 +22,12 @@ function FleetCard({ vehicle, index }) {
     >
       {/* Image */}
       <div className="aspect-[16/10] bg-light-card overflow-hidden relative">
-        <div className="w-full h-full bg-gradient-to-br from-light-card to-light-secondary flex items-center justify-center">
-          <p className="text-text-muted text-sm">Foto {vehicle.name}</p>
-        </div>
+        <img
+          src={vehicle.image}
+          alt={vehicle.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
         {vehicle.popular && (
           <span className="absolute top-4 left-4 bg-primary text-text-on-primary text-xs font-semibold px-3 py-1 rounded-full">
             Populer

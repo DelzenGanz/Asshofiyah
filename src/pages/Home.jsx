@@ -91,16 +91,11 @@ function Hero() {
           >
             <div className="relative">
               <div className="bg-dark-card rounded-2xl overflow-hidden aspect-[4/3] border border-dark-border">
-                <div className="w-full h-full bg-gradient-to-br from-dark-card to-dark-secondary flex items-center justify-center">
-                  <div className="text-center">
-                    <img
-                      src="/images/logo.png"
-                      alt="Asshofiyah"
-                      className="h-20 w-auto mx-auto mb-4 opacity-60"
-                    />
-                    <p className="text-text-muted text-sm">Foto armada segera hadir</p>
-                  </div>
-                </div>
+                <img
+                  src={fleet[0].image}
+                  alt={fleet[0].name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-primary text-text-on-primary px-5 py-3 rounded-xl shadow-lg">
@@ -235,9 +230,12 @@ function FleetHighlights() {
             >
               {/* Image */}
               <div className="aspect-[16/9] bg-light-card overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-light-card to-light-secondary flex items-center justify-center">
-                  <p className="text-text-muted text-sm">Foto {vehicle.name}</p>
-                </div>
+                <img
+                  src={vehicle.image}
+                  alt={vehicle.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
 
               {/* Content */}
